@@ -1,0 +1,3 @@
+const menu=document.querySelector('.menu');const nav=document.querySelector('.nav nav');if(menu){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
+const dialog=document.querySelector('#lightbox');if(dialog){const image=dialog.querySelector('img');document.querySelectorAll('.photo').forEach(p=>p.addEventListener('click',()=>{image.src=p.dataset.src;dialog.showModal()}));dialog.querySelector('button').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()})}
+document.querySelector('#year').textContent=new Date().getFullYear();
